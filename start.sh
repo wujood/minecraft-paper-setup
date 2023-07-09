@@ -1,3 +1,3 @@
 #!/bin/bash
 
-sudo java -Xms2G -Xmx2G -jar paper.jar --nogui
+sudo java -Xms3G -Xmx3G -jar paper.jar --nogui
