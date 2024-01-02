@@ -1,7 +1,6 @@
 #!/bin/bash
 
 # Updating and installing dependencies
-apt-get -y update
 apt-get -y install certbot python3-certbot-nginx
 
 # Insert domain into nginx

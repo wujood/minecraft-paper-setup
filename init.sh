@@ -7,7 +7,6 @@ mkdir $minecraft_path
 
 # Install java
 apt-get -y update
-apt-get -y upgrade
 apt install openjdk-17-jdk openjdk-17-jre
 
 # Install paper
@@ -19,9 +18,11 @@ cp start-mc_template.service /etc/systemd/system/start-minecraft.service
 sed -i "s#<PATH>#$minecraft_path#" /etc/systemd/system/start-minecraft.service
 systemctl enable start-minecraft.service
 systemctl start start-minecraft.service
-
 echo "wait for mc server to start..."
 sleep 60
+
+echo "eula=true" > $minecraft_path/eula.txt
+sleep 20
 
 cp whitelist.json $minecraft_path
 cp server.properties $minecraft_path
