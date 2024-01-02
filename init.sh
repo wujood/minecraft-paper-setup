@@ -5,8 +5,10 @@ minecraft_path="/root/minecraft"
 # Create workspace
 mkdir $minecraft_path
 
-# Set up nginx
-./nginx-setup.sh mc.nerd-labor.de
+# Install java
+apt-get -y update
+apt-get -y upgrade
+apt install openjdk-17-jdk openjdk-17-jre
 
 # Install paper
 curl https://api.papermc.io/v2/projects/paper/versions/1.20.4/builds/370/downloads/paper-1.20.4-370.jar -o $minecraft_path/paper.jar
@@ -23,6 +25,9 @@ sleep 60
 
 cp whitelist.json $minecraft_path
 cp server.properties $minecraft_path
+
+# Set up nginx
+./nginx-setup.sh $1
 
 echo "done."
 #reboot
