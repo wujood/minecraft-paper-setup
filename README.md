@@ -16,3 +16,9 @@ Type `java -jar paper.jar` to start it once.
 Place the `start.sh` inside the `/root/minecraft` folder.
 Place the `start-mc.service` file inside the file `/etc/systemd/system/start-minecraft.service`. After that run
 `sudo systemctl enable start-minecraft.service` and then to test it `sudo systemctl start start-minecraft.service`. After a reboot the server should start.
+
+## Whitelist
+Put the `whitelist.json` inside `/root/minecraft`.
+
+## Server settings
+A basic configuration of the server config file can be copied from `server.properties`. Just replace the current file inside the `/root/minecraft` folder.
