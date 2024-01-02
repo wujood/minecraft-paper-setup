@@ -1,4 +1,11 @@
 # minecraft-paper-setup
+This document contains a setup guide for a minecraft server using hetzners vServers.
+
+## Hetzner
+Create a vServer at hetzners cloud. At least a CX21. Don't forget to add your SSH key.
+
+## Domain (optional)
+Minecraft works by using a IPv4, but a domain is easier to remember. Point a A Record of your domain to the new server.
 
 ## Folder
 Create folder `minecraft` inside the `/root` folder.
@@ -7,6 +14,12 @@ Create folder `minecraft` inside the `/root` folder.
 ## Java
 Install Java Version 17 or above by using `apt`. If you have not installed it, type `java` in the terminal and it should
 display possible installation options.
+
+## nginx (optional)
+For web-based deployments such as [BlueMap](#bluemap) you need nginx. To install it run `nginx-setup.sh` as root with the following parameters:
+```sh
+./nginx-setup.sh <web-domain.com>
+```
 
 ## Paper
 Install Paper by downloading the `.jar` file from https://papermc.io/ and place it inside the `/root/minecraft` folder.
@@ -22,3 +35,8 @@ Put the `whitelist.json` inside `/root/minecraft`.
 
 ## Server settings
 A basic configuration of the server config file can be copied from `server.properties`. Just replace the current file inside the `/root/minecraft` folder.
+
+## Plugins (optional)
+
+### BlueMap
+To download and install [BlueMap](https://hangar.papermc.io/Blue/BlueMap)

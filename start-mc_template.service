@@ -3,8 +3,8 @@ Description=Minecraft Server
 After=default.target
 
 [Service]
-WorkingDirectory=/root/minecraft
-ExecStart=/root/minecraft/start.sh
+WorkingDirectory=<PATH>
+ExecStart=<PATH>/start.sh
 Restart=always
 User=root
 Group=root
