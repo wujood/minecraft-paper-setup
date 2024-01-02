@@ -14,7 +14,7 @@ curl https://api.papermc.io/v2/projects/paper/versions/1.20.4/builds/370/downloa
 # Create service for mc server
 cp start.sh $minecraft_path
 cp start-mc_template.service /etc/systemd/system/start-minecraft.service
-sed -i "s/<PATH>/\\$minecraft_path/" /etc/systemd/system/start-minecraft.service
+sed -i "s#<PATH>#$minecraft_path#" /etc/systemd/system/start-minecraft.service
 systemctl enable start-minecraft.service
 systemctl start start-minecraft.service
 
