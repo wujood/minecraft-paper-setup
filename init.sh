@@ -7,10 +7,10 @@ mkdir $minecraft_path
 
 # Install java
 apt-get -y update
-apt install -y openjdk-17-jdk openjdk-17-jre
+apt install -y openjdk-21-jdk openjdk-21-jre
 
 # Install paper
-curl https://api.papermc.io/v2/projects/paper/versions/1.21.1/builds/131/downloads/paper-1.21.1-131.jar -o $minecraft_path/paper.jar
+curl https://api.papermc.io/v2/projects/paper/versions/1.21.3/builds/12/downloads/paper-1.21.3-12.jar -o $minecraft_path/paper.jar
 
 # Preaccept eula
 echo "eula=true" > $minecraft_path/eula.txt
