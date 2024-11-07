@@ -24,8 +24,12 @@ systemctl start start-minecraft.service
 echo "wait for mc server to start..."
 sleep 60
 
+# Set server config
 cp whitelist.json $minecraft_path
 cp server.properties $minecraft_path
+
+# Install BlueMap 
+curl https://github.com/BlueMap-Minecraft/BlueMap/releases/download/v5.4/bluemap-5.4-paper.jar -o $minecraft_path/plugins/bluemap.jar
 
 # Set up nginx
 ./nginx-setup.sh $1
