@@ -34,10 +34,13 @@ sleep 60
 # Set server config
 cp minecraft-configs/whitelist.json $minecraft_path
 cp minecraft-configs/server.properties $minecraft_path
+mkdir $minecraft_path/plugins/BlueMap
 cp minecraft-configs/bluemap-core.conf $minecraft_path/plugins/BlueMap/core.conf
 
 # Set up nginx
 ./nginx-setup.sh $1
 
+# Restart
+systemctl restart start-minecraft.service
+
 echo "done."
-#reboot
