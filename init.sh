@@ -19,7 +19,7 @@ echo "eula=true" > $minecraft_path/eula.txt
 curl -L https://github.com/BlueMap-Minecraft/BlueMap/releases/download/v5.4/bluemap-5.4-paper.jar -o $minecraft_path/plugins/bluemap.jar
 
 # Copy default logo
-cp server-icon.png $minecraft_path
+cp minecraft-configs/server-icon.png $minecraft_path
 
 # Create service for mc server
 cp start.sh $minecraft_path
@@ -31,8 +31,9 @@ echo "wait for mc server to start..."
 sleep 60
 
 # Set server config
-cp whitelist.json $minecraft_path
-cp server.properties $minecraft_path
+cp minecraft-configs/whitelist.json $minecraft_path
+cp minecraft-configs/server.properties $minecraft_path
+cp minecraft-configs/bluemap-core.conf $minecraft_path/plugins/BlueMap/core.conf
 
 # Set up nginx
 ./nginx-setup.sh $1
