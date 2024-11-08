@@ -15,6 +15,9 @@ curl https://api.papermc.io/v2/projects/paper/versions/1.21.3/builds/12/download
 # Preaccept eula
 echo "eula=true" > $minecraft_path/eula.txt
 
+# Copy default logo
+cp server-icon.png $minecraft_path
+
 # Create service for mc server
 cp start.sh $minecraft_path
 cp start-mc_template.service /etc/systemd/system/start-minecraft.service
