@@ -15,6 +15,9 @@ curl https://api.papermc.io/v2/projects/paper/versions/1.21.3/builds/12/download
 # Preaccept eula
 echo "eula=true" > $minecraft_path/eula.txt
 
+# Install BlueMap 
+curl -L https://github.com/BlueMap-Minecraft/BlueMap/releases/download/v5.4/bluemap-5.4-paper.jar -o $minecraft_path/plugins/bluemap.jar
+
 # Copy default logo
 cp server-icon.png $minecraft_path
 
@@ -30,9 +33,6 @@ sleep 60
 # Set server config
 cp whitelist.json $minecraft_path
 cp server.properties $minecraft_path
-
-# Install BlueMap 
-curl https://github.com/BlueMap-Minecraft/BlueMap/releases/download/v5.4/bluemap-5.4-paper.jar -o $minecraft_path/plugins/bluemap.jar
 
 # Set up nginx
 ./nginx-setup.sh $1
