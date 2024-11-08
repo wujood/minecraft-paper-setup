@@ -16,6 +16,7 @@ curl https://api.papermc.io/v2/projects/paper/versions/1.21.3/builds/12/download
 echo "eula=true" > $minecraft_path/eula.txt
 
 # Install BlueMap 
+mkdir $minecraft_path/plugins
 curl -L https://github.com/BlueMap-Minecraft/BlueMap/releases/download/v5.4/bluemap-5.4-paper.jar -o $minecraft_path/plugins/bluemap.jar
 
 # Copy default logo
