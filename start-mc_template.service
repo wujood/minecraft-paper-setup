@@ -4,10 +4,10 @@ After=default.target
 
 [Service]
 WorkingDirectory=<PATH>
-ExecStart=<PATH>/start.sh
+ExecStart=<PATH>/start.sh <PATH>/paper.jar
 Restart=always
-User=root
-Group=root
+User=minecraft
+Group=minecraft
 Type=simple
 
 [Install]
