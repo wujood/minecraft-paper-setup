@@ -23,7 +23,7 @@ mkdir $minecraft_path/plugins
 curl -L https://github.com/BlueMap-Minecraft/BlueMap/releases/download/v5.4/bluemap-5.4-paper.jar -o $minecraft_path/plugins/bluemap.jar
 
 # Install Banner Marker Plugin
-curl -L https://cdn.modrinth.com/data/6G0lCDWV/versions/x8k2WB8a/BlueMap-BannerMarker.jar -o $minecraft_path/plugins/bbanner.jar
+curl -L https://cdn.modrinth.com/data/6G0lCDWV/versions/u9tkIHXP/BlueMap-BannerMarker.jar -o $minecraft_path/plugins/bbanner.jar
 
 # Copy default logo
 cp minecraft-configs/server-icon.png $minecraft_path
