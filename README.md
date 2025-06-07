@@ -87,3 +87,10 @@ To install the [BlueMap](https://hangar.papermc.io/Blue/BlueMap) plugin, downloa
 --- 
 
 This completes the setup. For additional plugins or advanced server configurations, refer to the official [PaperMC](https://docs.papermc.io/) documentation.
+
+## Rebooting
+
+When you reboot the server you need to manually start the minecraft server again via `systemctl`. Use the following command to start the server:
+```
+sudo systemctl start start-minecraft
+```
