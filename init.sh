@@ -13,14 +13,14 @@ apt-get -y update
 apt install -y openjdk-21-jdk openjdk-21-jre
 
 # Install paper
-curl https://api.papermc.io/v2/projects/paper/versions/1.21.5/builds/109/downloads/paper-1.21.5-109.jar -o $minecraft_path/paper.jar
+curl https://fill-data.papermc.io/v1/objects/18ba9d325ceecdf5028fd74bf6c8daa103426308b435bb44de7dadba27b5119b/paper-1.21.9-47.jar -o $minecraft_path/paper.jar
 
 # Preaccept eula
 echo "eula=true" > $minecraft_path/eula.txt
 
 # Install BlueMap 
 mkdir $minecraft_path/plugins
-curl -L https://github.com/BlueMap-Minecraft/BlueMap/releases/download/v5.4/bluemap-5.4-paper.jar -o $minecraft_path/plugins/bluemap.jar
+curl -L https://github.com/BlueMap-Minecraft/BlueMap/releases/download/v5.12/bluemap-5.12-paper.jar -o $minecraft_path/plugins/bluemap.jar
 
 # Install Banner Marker Plugin
 curl -L https://cdn.modrinth.com/data/6G0lCDWV/versions/u9tkIHXP/BlueMap-BannerMarker.jar -o $minecraft_path/plugins/bbanner.jar
